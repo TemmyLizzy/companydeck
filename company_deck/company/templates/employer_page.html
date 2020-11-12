@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Employer's Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/page.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+    </head>
+    <body>
+
+<header>
+
+    <section id="header">
+       <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} " alt="logo" width="45px"></a></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class ="mr auto"></div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <div class = "dropdown">
+                            <a class="nav-link" href="#">Companies review</a>
+                        <div class ="dropdown-content">
+                            <a href=" {% url 'company_review' %} ">Companies</a>
+                            <a href=" {% url 'job_search' %} ">All Jobs</a>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a class="nav-link" href="#">Employer</a>
+                                <div class="dropdown-content">
+                                    <a href = "{% url 'employ_form' %}">Post a job </a>
+                                </div>
+                            </div>
+                           
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</section>
+
+
+<div class="container text-right">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h1 class=" shadow font-italic text-light">Your next hire is Super and Fast</h1>
+            <h4 class= "text-light pt-4">You know who you're looking for.</h6>
+            <h4 class= "text-light">We will help you find them now!</h6>
+            
+            <a href ="{% url 'employ_form'%}">
+                <button class="btn btn-info text-light px-5 py-2"> Post a job</button>
+            </a>
+    </div>
+</div>
+
+</header>
+
+<main>
+    <section class="section-1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="work">
+                        <img src=" {% static './image/images (10).jpeg' %} " alt="work"/>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="panel text-left">
+                        <h1>Allison </h1>
+                        <p class="pt4">
+                            I've used other websites in the past for hiring;<br> nothing has ever been this easy,<br>
+                             this simple, and this effective.<br><br><br>
+                          <b> Human Resource Manager at Venie Limited </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class= "section-2 container-fluid p-0">
+    <div class="row">
+        <div class= "col-md-12 col-sm-12">
+<div class="cover">
+    <div class="content text-center">
+        <h1 class = "text-left">You are on to the best</h1>
+    </div>
+</div>
+
+
+<div class="container-fluid text-center">
+    <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+<div class="rect">
+    <p>Deck helps the world's largest family resturant business to
+         recruit high quality candidates for its hard-to-fill positions</p>
+</div>
+<div class="rect"><p>The world oldest university uses Deck to draw targetted jobseeker 
+    traffic to fill both niche academic positions and corprate support roles</p>
+
+</div>
+<div class="rect"> <p>The world leader in mobile communication uses Deck sponsored 
+    jobs to lower its cost per applicant and cost per hire</p>
+</div>
+
+    </div>
+</div>
+
+
+<div class="purchase text-center">
+    <h1>Save time and effort in your hiring journey.</h1>
+    <p> Finding the best fit for the job shouldn't be a full-time job.<br>Deck  simple and powerful tools let you source,<br>screen, and hire faster</p>
+<div class="cards">
+ <div class="d-flex flex-row justify-content-center flex-wrap">
+    <div class="card">
+        <div class="card-body">
+                <div class="title">
+                     <h5 class="card-title">1</h5>
+                </div>
+             <p><b>Create your free account</b></p>
+             <p>All you need <br>is your email address<br> to crate an account</p>
+        </div>
+
+    </div>
+
+
+    <div class="card">
+        <div class="card-body">
+            <div class="title">
+                <h5 class="card-title">2</h5>
+             </div>
+             <p><b>Build your job post</b></p>
+             <p>Then just add a title,<br> description, and location <br>to your job post, <br>and you're ready to go</p>
+        </div>
+
+    </div>
+    
+
+
+
+    <div class="card">
+        <div class="card-body">
+            <div class="title">
+                <h5 class="card-title">3</h5>
+             </div>
+             <p><b>Post your job</b></p>
+             <p>After you post your<br> we would keep you posted<br> on development and trend<br>to find your dream talent</p>
+        </div>
+
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-3 container-fluid p-0 text-center">
+    <div class="row">
+    <div class="col-md-12 col-sm-12">
+        <h3>Get started in minutes!</h3>
+        
+        <a href ="{% url 'employ_form'%}">
+        <button class="btn btn-dark px-5 py-2"> start posting</button>
+        </a>
+
+    </div>
+    </div>
+
+</section>
+
+
+
+</main>
+
+<footer>
+    <div class="container p-0">
+        <div class="row text-left">
+            <div class="col-md-5 col-md-5">
+                <h4 class="text-light">About Us</h4>
+                <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h4 class ="text-light">Follow us</h4>
+                <p class="text-warning">Let be your plug</p>
+                <div class ="column">
+                    <i class = "fab fa-facebook"></i>
+                    <i class = "fab fa-instagram"></i>
+                    <i class = "fab fa-twitter"></i>
+                    <i class = "fab fa-youtube"></i>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</footer>
+</body>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+    </html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Candidate_page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/job.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+    </head>
+    <body>
+    <!--header-->
+    <section id="header">
+       <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} " alt="logo" width="45px"></a></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                {% for message in messages %} 
+                <div class="alert alert-primary"  role="alert">{{message}} </div></p>
+                {% endfor %}
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class ="mr auto"></div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employ_form' %} ">Post a job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'company_review' %} ">Companies Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'job_search' %} ">All jobs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                        </li>
+
+                    </ul>
+                </div>
+               
+            </nav>
+        </div>
+
+        <div class="banner text-center">
+            <h1>JOBS AROUND YOU</h1>
+            <p>Deck work corners of job locations for you to WORK</p>
+        </div>
+    </section>
+<br>
+<br>
+    <div class="search-job text-center">
+        <div class = "form-group">
+        <label for = "what"><b>What</b><br>
+            Job title, keywords, or company
+        </label>
+    <form action="{% url 'job_production' %}" method="get">
+    <input type="text" name = "q"class="form-control"  placeholder="job title, keywords, or company"/>
+    </div>
+<br>
+    <div class = "form-group">
+        <label for = "where"><b>Where</b><br>
+            city or state
+        </label>
+        <input type="text"  name = "q"class="form-control" placeholder="city or state">
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="Find job">
+</form>
+</div>
+<hr>
+
+<!--top recuiters-->
+<section id="recruiters">
+<div class="conatiner text-center">
+    <h3>TOP RECRUITERS</h3>
+</div>
+<div>
+    <img src=" {% static 'image/download.png' %} " alt="security_logo">
+   <img src=" {% static 'image/images (5).jpeg' %} " alt="road_logo">
+    <img src=" {% static 'image/images (6).jpeg' %} " alt ="uba_logo">
+    <img src=" {% static 'image/images (7).jpeg' %} " alt="immigration_logo">
+    <img src=" {% static 'image/kpmg.png' %} " alt="kpmg_logo">
+    <img src=" {% static 'image/download (2).png' %} " alt="nestle_logo">
+    <img src=" {% static 'image/download (1).png' %} " alt="dangote_logo">
+    <img src=" {% static 'image/download (3).png' %} " alt="unilever_logo">
+    <img src=" {% static 'image/download (4).png' %} " alt="airtel_logo">
+    <img src=" {% static 'image/download (5).png' %} " alt="who_logo">
+    <img src=" {% static 'image/hallmark_tcm31-4844.png' %} " alt="cheveron_logo">
+    <img src=" {% static 'image/images (1).png' %} " alt="shell_logo">
+    
+</div>
+</section>
+<!--Recent Jobs-->
+
+
+<section id="jobs">
+    <div class="container">
+        <h5 class = "company-details_heading">RECENT UPDATES</h5>
+        <div class="company-details">
+            <div class="job-update">
+                <h4><b>Language Teacher (Virtual Class)</b></h4>
+                <p>XYZ Learnings</p>
+                <i class = "fa fa-briefcase"></i><span>0-1yrs</span><br>
+                <i class = "fa fa-inr"></i><span>75,000 - 150,000</span><br>
+                <i class = "fa fa-map-marker"></i><span> Lagos, Nigeria</span><br>
+            </div>
+            <div class="apply-btn">
+                <a href="https://learningonline.xyz/careers">
+                <button type="button" class="btn btn-primary">Apply</button>
+                </a>
+
+            </div>
+<br>
+            <div class="company-details">
+                <div class="job-update">
+                    <h4><b>Nigerian Language Teacher (Yoruba) </b></h4>
+                    <p>Jewels leading Lights Academy</p>
+                    <i class = "fa fa-briefcase"></i><span>Full-time</span><br>
+                    <i class = "fa fa-inr"></i><span>50,000 - 60,000</span><br>
+                    <i class = "fa fa-map-marker"></i><span>Abuja, Nigeria</span><br>
+                </div>
+                <div class="apply-btn">
+                    <a href=" https://jewelsleadinglights.com/ ">
+                    <button type="button" class="btn btn-primary">Apply</button>
+                    </a>
+            </div>
+            <br>
+                <div class="company-details">
+                    <div class="job-update">
+                        <h4><b>Remote Researcher/Writer </b></h4>
+                        <p>Researchshelf.com</p>
+                        <i class = "fa fa-briefcase"></i><span>Contract</span><br>
+                        <i class = "fa fa-inr"></i><span>90,000 -120,000</span><br>
+                        <i class = "fa fa-map-marker"></i><span>Nationwide</span><br>
+                    </div>
+                    <div class="apply-btn">
+                        <a href=" https://researchshelf.com/ ">
+                        <button type="button" class="btn btn-primary">Apply</button>
+                        </a>
+        
+                    </div>
+<br>
+                    <div class="company-details">
+                        <div class="job-update">
+                            <h4><b>Teacher </b></h4>
+                            <p>Firm Base College</p>
+                            <i class = "fa fa-briefcase"></i><span>Full-time</span><br>
+                            <i class = "fa fa-inr"></i><span>60,000 -80,000 </span><br>
+                            <i class = "fa fa-map-marker"></i><span>Lagos, Nigeria</span><br>
+                           
+                        </div>
+                        <div class="apply-btn">
+                            <a href=" https://goodschoolsguidenigeria.com/school/firm-base-college">
+                            <button type="button" class="btn btn-primary">Apply</button>
+                            </a>
+            
+                        </div>
+
+                        <div class="company-details">
+                            <div class="job-update">
+                                <ul>
+                                {% for data in data %}
+                                <h4><b><li>{{data.jobtitle}}</li> </b></h4>
+                                <p><li>{{data.copname}}</li></p>
+                                {% endfor %}
+                                </ul>
+                                {% for data in data2%}
+                                <i class = "fa fa-briefcase"></i><span>{{data.contract}}</span><br>
+                                {% endfor %}
+                                {% for data in data3%}
+                                <i class = "fa fa-inr"></i><span>{{data.amount1}} - {{data.amount2}}</span><br>
+                                {% endfor %}
+                                {% for data in data %}
+                                <i class = "fa fa-map-marker"></i><span>{{data.location}}</span><br>
+                                {% endfor %}
+                            </div>
+                            <div class="apply-btn">
+                                <a href=" https://researchshelf.com/ ">
+                                <button type="button" class="btn btn-primary">Apply</button>
+                                </a>
+                
+                            </div>
+        <br>
+
+
+        </div>
+        <ul>
+
+</section>
+<footer>
+    <div class="container p-0">
+        <div class="row text-left">
+            <div class="col-md-5 col-md-5">
+                <h4 class="text-light">About Us</h4>
+                <p class = "text-warning ">connecting employer and seekers of jobs<br>
+                <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h4 class ="text-light">Follow us</h4>
+                <p class="text-warning">Let be your plug</p>
+                <div class ="column">
+                    
+                    <i class = "fab fa-facebook"></i>
+                    <i class = "fab fa-instagram"></i>
+                    <i class = "fab fa-twitter"></i>
+                    <i class = "fab fa-youtube"></i>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+    </html>

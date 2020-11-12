@@ -1,0 +1,35 @@
+.container{
+    margin-top: 50px !important;
+    
+}
+
+
+button[type="submit"]
+{
+    margin-top: 10px;
+    border:none;
+    cursor:pointer;
+    border-radius: 20px;
+    background:orange;
+    color:lightblue;
+    font-size:90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition: 0.5s;
+    padding: 8px;
+    margin-left: 100px !important;
+}
+
+button[type="submit"]:hover{
+    background:lightblue;
+}
+
+.text-center{
+    margin-bottom: 30px;
+    margin-top: 40px;
+    color:orange;
+}
+
+.text-center p{
+    font-size: 25px;
+}

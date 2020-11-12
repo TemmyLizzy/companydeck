@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+{% load static %}
+    <html lang="en">
+    <head>
+        <title>Company Review</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/search1.css' %} ">  
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+    </head>
+    <body>
+    <body>
+
+<header>
+
+    <section id="header">
+       <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} "alt="logo" width="45px"></a></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class ="mr auto"></div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <div class = "dropdown">
+                            <a class="nav-link" href="company_review.html">Companies review</a>
+                        <div class ="dropdown-content">
+                            <a href="#">Companies</a>
+                            <a href=" {% url 'job_search' %} " >All Jobs</a>
+                            </div>
+                        </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <div class="dropdown">
+                                <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                                <div class="dropdown-content">
+                                    <a href = "{% url 'employ_form' %}">Post Job</a>
+                                </div>
+                            </div>
+                           
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</section>
+
+ {% for review in reviews %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+         <img  src="{{review.image.url}}" alt="image" width= "1200px">
+    </div>
+</div>
+
+</header>
+
+<section class="up">
+    <div class="container p-0">
+    <div class="row text-left">
+
+        <div class="col-md-5 col-md-5">
+            <i class ="fa fa-building "></i> <img src= "{{ review.logo.url }}" alt="logo" width="90px">
+            <h1 class="text-primary">{{ review.name }}</h1>
+        
+         </div>
+
+            <div class="col-md-6 col-sm-12 text-right">
+                <ul class = "list-unstyled list-inline">
+                    <li class = "text-warning list-inline-item">
+                 {{review.rating}}
+                 <i class = "fa fa-star"></i>
+                 <i class = "fa fa-star"></i>
+                 <i class = "fa fa-star"></i>
+                 <i class = "fa fa-star"></i>
+                 <i class = "fa fa-star"></i>
+                    </li>
+                    <ul></ul>
+
+                </div>
+
+                <div class = "col-12 text-right">
+                
+                    {{ review.location }}
+                
+                    
+                </div>
+    
+    </div>
+</div>
+</section>
+
+<section class="section-2 container-fluid p-0 text-left">
+    <div class="row">
+    <div class="col-md-12 col-sm-12">
+        <div class="about">
+                           
+            <h4 class = "text-primary">See Why Join Us</h4>
+         </div>
+       
+         </div>
+    </div>
+    <br>
+
+    <div class="company-details">
+         <div class="job-update">
+        <h4><b>{{ review.work }} ?</b></h4>
+            
+                        <span class ="fa fa-star"></span>{{ review.work1 }}<br>
+                        <span class ="fa fa-star checked"></span>{{ review.work2 }}<br>
+                         <span class ="fa fa-star checked"></span>{{ review.work3 }}<br>
+                         <span class ="fa fa-star checked"></span>{{ review.work4 }}<br>
+                           
+                        </div>
+                       
+        </div>
+
+</section>
+<br>
+
+<div class="company-details">
+    <div class="job-update">
+   <h5><b>Top Locations and What People say!</b></h5>
+       
+    <span class ="fa fa-star"></span>{{ review.loc1 }}<br>
+     <span class ="fa fa-star checked"></span>{{ review.loc2 }}<br>
+     <hr>
+     <p class= "text-left text-light">
+     <span class ="fa fa-star checked"></span>{{ review.loc3 }}<br>
+    <span class ="fa fa-star checked"></span>{{ review.loc4 }}<br>
+     </p>
+                      
+     </div>
+                  
+   </div>
+
+
+<br>
+<div class="company-details">
+    <div class="job-update">
+   <h5><b>Jobs Available</b></h5>
+   </div>
+</div>
+
+<br>
+   <div class="container-fluid text-center">
+    <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+<div class="rect">
+    <p><h5>{{ review.job1 }}</h5> <br></p>
+
+        <a href = "{{ review.url }}"> Apply on Company Site </a>
+            
+    
+    <br>
+    {{ review.created_date }}
+</div>
+<div class="rect">
+    <p><h5>{{ review.job2 }}</h5></p> <br>
+
+    <a href = "{{ review.url }}"> Apply on Company Site</a>
+    
+        <br>
+        {{ review.created_date }}
+</div>
+<div class="rect"> 
+    
+    <p><h5>{{ review.job3 }}</h5></p> <br>
+
+    <a href = "{{ review.url }}"> Apply on Company Site</a>
+        <br>
+        {{ review.created_date }}
+</div>
+
+    </div>
+</div>
+
+<div class="company-details">
+    <div class="job-update2">
+        <h3>About Us</h3>
+   <h6>{{ review.description }}</h6>
+    <p>  <a href = "{{ review.url}}"><h5> Visit</h5></a></p>
+    </div>
+</div>
+
+{% endfor %}
+
+<footer>
+    <div class="container p-0">
+        <div class="row text-left">
+            <div class="col-md-5 col-md-5">
+                <h4 class="text-light">About Us</h4>
+                <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h4 class ="text-light">Follow us</h4>
+                <p class="text-warning">Let be your plug</p>
+                <div class ="column">
+                    <i class = "fab fa-facebook"></i>
+                    <i class = "fab fa-instagram"></i>
+                    <i class = "fab fa-twitter"></i>
+                    <i class = "fab fa-youtube"></i>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</footer>
+</body>
+
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+ </html>

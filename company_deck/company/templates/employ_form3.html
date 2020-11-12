@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Employer's Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/form.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+       
+    </head>
+    <body>
+
+   
+    <!--header-->
+    <section id="header">
+        <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} " alt="logo" width="45px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'job_search' %} ">All jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'company_review' %} ">Companies reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employ_form' %} ">Post a job</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+<div>
+    <div class="card-body">
+        <i class ="fa fa-pencil-square-o" aria-hidden="false"></i>
+        <h4 class="title text-center mt-4">
+            <i class ="fa fa-book"></i>
+         <span> Fill Up.</span>
+           </h4>
+
+        <p class= "title text-center mt-2">
+            <i class ="fa fa-map-marker"></i> <span>
+            Country : Nigeria</span><br>
+
+            <i class="fa fa-language"></i><span>
+          Language used : English</span></p>
+
+    </div>
+    
+
+    <div class="container-sm">
+        <div class="row px-">
+             <div class="col-lg-4 col-xl-5 mx-auto px-0">
+                           <div class="img-left d-none d-md-flex"></div>
+                           
+                           <form method = "POST" action="/employ_form3/"class="form-box px-3">
+                            {% csrf_token %}
+                        
+                                 <div class = "form-group">
+
+
+                                    <p><h4 class="text-info">Compensation</h4></p>
+
+                                    <div class = "form-group col-sm-5">
+                                    <select class= "form-control"id="range" name="rangeo">
+                                        <option
+                                        value="rone">Range</option>
+                                        <option
+                                        value="rtwo">Starting at</option>
+                                        <option
+                                        value="rthree"> Up to</option>
+                                        <option
+                                        value="rfour">Exact rate</option><br>
+         
+                                      </select>
+                                    </div>
+         
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text">&#8358;</span>
+                                    
+                                    </div>
+
+                                    <input type = "text"  name= "amount1" class = "form-control" aria-label="Amount(to the nearest Naira)">
+
+                                    <div class="input-group-prepend">
+
+                                        <span class="input-group-text">to</span>
+                                    </div>
+                                    <input type = "text" name="amount2" class = "form-control" aria-label="Amount(to the nearest Naira)">
+
+                                    <div class="input-group-append">
+
+                                        <span class="input-group-text">
+
+                                
+                                            <select id="per" name="per">
+                                                <option
+                                                name="perone">per hour</option>
+                                                <option
+                                                name="pertwo">per day</option>
+                                                <option
+                                                name="perthree">per week</option>
+                                                <option
+                                                name="perfour">per month</option>
+                                                <option
+                                                name="perfive">per year</option>
+                                            
+                                            
+                                            </select>
+                            
+
+
+                                        </span>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                
+
+                           
+
+                             <div class= "form-group">
+                    <label for = "description">
+                        <h4 class="text-info"> Job description</h4>
+
+                        <p class="text-info"> Describe the responsibilities of this job, required work experiences, skills, or education </p>
+                    </label>
+                    <textarea class="form-control" rows="10" name="comment" required>
+                       
+                    </textarea>
+                             </div>
+                             <hr class="my-4">
+                                 </div>     
+                        
+                                 <button type="submit" class="btn btn-primary">Register the job</button>
+  
+                    
+                         </form>
+        
+            </div>   
+
+        </div>
+    </div>
+
+    
+
+
+        <footer>
+            <div class="container p-0">
+                <div class="row text-left">
+                    <div class="col-md-5 col-md-5">
+                        <h4 class="text-light">About Us</h4>
+                        <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                        <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+        
+                        <h4 class ="text-light">Follow us</h4>
+                        <p class="text-warning">Let be your plug</p>
+                        <div class ="column">
+                            <i class = "fab fa-facebook"></i>
+                            <i class = "fab fa-instagram"></i>
+                            <i class = "fab fa-twitter"></i>
+                            <i class = "fab fa-youtube"></i>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </footer>
+        
+        </body>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+    </html>

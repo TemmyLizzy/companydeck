@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Company Review</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/review.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+    </head>
+    <body>
+
+<header>
+    <section id="header">
+       <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} " alt="logo" width="45px"></a></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class ="mr auto"></div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'job_search' %} ">All jobs</a>
+                        </li>
+
+                      
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Company reviews</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+</section>
+
+
+
+<!--sections-->
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <h1>There is a workplace for you. Find it!</h1>
+            <h6>Discover millions of company reviews</h6>
+            <form action="{% url 'search_production' %}" method="get" class = "form-inline">
+                <div class="col pl-">
+                    <div class="input-group pr-3">
+                
+                <input type="text" name="q" class="form-control" placeholder="name or state">
+                
+                <button type= "submit" class="btn btn-dark px-4 py-1 bg-warning"> Search </button>
+                    </div>
+                </div>
+            </form>
+         
+        </div>
+            <div class="col-md-4 col-sm-12 h-20">
+                <img src=" {% static './image/images (16).jpeg' %} " class= "img-responsive"alt="">
+        </div>
+    </div>
+</div>
+</header>
+
+
+<main>
+
+<section class="section-1">
+    <div class="container text-center">
+        <h1 class="text-warning"><i class ="fa fa-building"></i>Popular Companies</h1>
+    </div>
+    <div class="review row">
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                    <img src=" {% static './image/images (4).png' %} " alt="air_liquide" class="img-fluid"/>
+                </div>
+                <div class="card-body">
+                <h3 class="card-title"> Air Liquide</h3><br>
+                <span class ="fa fa-star checked"></span>
+                <span class ="fa fa-star checked"></span>
+                <span class ="fa fa-star checked"></span>
+                <span class ="fa fa-star checked"></span>
+                <span class ="fa fa-star checked"></span>
+                <span class="card-text"> 1,558 reviews.</span>
+                <a href="https://www.airliquide.com/nigeria" class= "text-warning text-decoration-none">Visit</a>
+                <p class="text-black-50">Open jobs</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 col-12">
+        <!--Caurousel Start-->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class ="carousel-item active text-center">
+                    <!--card2-->
+                    <div class="card mr-2 d-inline-block shadow-lg">
+                        <div class="card-img-top">
+                            <img src=" {% static './image/kpmg-.png' %} " alt="kpmg" class="img-fluid "/>
+                        </div>
+                        <div class="card-body">
+                        <h3 class="card-title"> Kpmg </h3>
+                         <span class ="fa fa-star checked"></span>
+                        <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star border-warning "></span>
+                        <span class="card-text"> 6,663 reviews.</span>
+                        <a href="https://home.kpmg/ng/en/home/misc/contact.html" class= "text-warning text-decoration-none">Visit</a>
+                        <p class="text-black-50">Open jobs</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class ="carousel-item text-center">
+                <!--card3-->
+                <div class="card mr-2 d-inline-block shadow-lg">
+                    <div class="card-img-top">
+                        <img src=" {% static './image/samsung.png' %} " alt="member" class="img-fluid"/>
+                    </div>
+                    <div class="card-body">
+                    <h3 class="card-title"> Samsung Electronics</h3>
+                    <span class ="fa fa-star checked"></span>
+                    <span class ="fa fa-star checked"></span>
+                     <span class ="fa fa-star checked"></span>
+                     <span class ="fa fa-star checked"></span>
+                     <span class ="fa fa-star border-warning "></span>
+                    <span class="card-text"> 8,099 reviews.</span>
+                    <a href="https://www.samsung.com/africa_en/" class= "text-warning text-decoration-none">Visit</a>
+                    <p class="text-black-50">Open jobs</p>
+                    </div>
+                </div>
+
+                </div>
+
+                
+                <div class ="carousel-item text-center">
+                    <!--card4-->
+                    <div class="card mr-2 d-inline-block shadow-lg">
+                        <div class="card-img-top">
+                            <img src=" {% static './image/download (4).png' %} " alt="member" class="img-fluid"/>
+                        </div>
+                        <div class="card-body">
+                        <h3 class="card-title"> Airtel </h3>
+                        <span class ="fa fa-star checked"></span>
+                        <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star border-warning "></span>
+                        <span class="card-text"> 704 reviews.</span>
+                        <a href="https://www.airtel.com.ng/" class= "text-warning text-decoration-none">Visit</a>
+                        <p class="text-black-50">Open jobs</p>
+                        </div>
+                    </div>
+    
+                    </div>
+
+                    
+                    <div class ="carousel-item text-center">
+                        <!--card5-->
+                        <div class="card mr-2 d-inline-block shadow-lg">
+                            <div class="card-img-top">
+                                <img src=" {% static './image/images (3).png' %} "  alt="member" class="img-fluid"/>
+                            </div>
+                            <div class="card-body">
+                            <h3 class="card-title"> FrieslandCampina</h3>
+                            <span class ="fa fa-star checked"></span>
+                        <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star border-warning "></span>
+                        <span class="card-text"> 357 reviews.</span>
+                        <a href="https://www.frieslandcampina.com.ng/" class= "text-warning text-decoration-none">Visit</a>
+                        <p class="text-black-50">Open jobs</p>
+                    </div>
+                    </div>
+        
+            </div>
+        
+            </div>
+
+        </div>
+    </div>
+        <div class="col-md-4 col-12 text-center">
+            <!--card6-->
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                    <img src=" {% static './image/download (5).png' %} " alt="member" class="img-fluid"/>
+                </div>
+                <div class="card-body">
+                <h3 class="card-title"> World Health Organization </h3>
+                <span class ="fa fa-star checked"></span>
+                        <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star checked"></span>
+                         <span class ="fa fa-star border-warning "></span>
+                        <span class="card-text"> 270 reviews.</span>
+                        <a href="https://www.who.int/" class= "text-warning text-decoration-none">Visit</a>
+                        <p class="text-black-50">Open jobs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<section class="section-3 container-fluid text-left">
+    <div class="row">
+    <div class="col-md-4 col-sm-12">
+        <h3 class=text-warning>More Popular Companies</h3>
+        <ul class="no-bullets text-light">
+            <li>British American Tobacco</li>
+            <li>Weatherford</li>
+            <li>KFC</li>
+            <li>The Coca-Cola Company(TCCC)</li>
+            <li>MultiChoice</li>
+            <li>Hilton</li>
+            <li>SPIE</li>
+
+        </ul>
+        
+    </div>
+    </div>
+
+</section>
+
+
+
+<footer>
+    <div class="container p-0">
+        <div class="row text-left">
+            <div class="col-md-5 col-md-5">
+                <h4 class="text-light">About Us</h4>
+                <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+
+                <h4 class ="text-light">Follow us</h4>
+                <p class="text-warning">Let be your plug</p>
+                <div class ="column">
+                    <i class = "fab fa-facebook"></i>
+                    <i class = "fab fa-instagram"></i>
+                    <i class = "fab fa-twitter"></i>
+                    <i class = "fab fa-youtube"></i>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+ </html>

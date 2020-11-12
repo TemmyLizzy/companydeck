@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Employer's Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/form.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+       
+    </head>
+    <body>
+
+   
+    <!--header-->
+    <section id="header">
+        <div class="menubar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} " alt="logo" width="45px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'job_search' %} ">All jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'company_review' %} ">Companies reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=" {% url 'employ_form' %} ">Post a job</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+<div>
+    <div class="card-body">
+        <i class ="fa fa-pencil-square-o" aria-hidden="false"></i>
+        <h4 class="title text-center mt-4">
+            <i class ="fa fa-book"></i>
+         <span> Fill Up.</span>
+           </h4>
+
+        <p class= "title text-center mt-2">
+            <i class ="fa fa-map-marker"></i> <span>
+            Country : Nigeria</span><br>
+
+            <i class="fa fa-language"></i><span>
+          Language used : English</span></p>
+
+    </div>
+
+<div class="container-sm">
+       <div class="row px-">
+            <div class="col-lg-5 col-xl-4  mx-auto px-0">
+                          <div class="img-left d-none d-md-flex"></div>
+                          
+                    
+                        <form action="/employ_form/" method="POST" class="form-box px-3">
+                            {% csrf_token %}
+                                <div class = "form-group">
+                            <label for="name"><h4 class="text-info">First Name</h4></label><br>
+               <input type="text" class="form-control" placeholder="first name" name="fname" required><br>
+
+               <label for="name"><h4 class="text-info">Last Name</h4></label><br>
+               <input type="text" class="form-control" placeholder="last name" name="lname" required><br>
+               
+               <label for="phone"><h4 class="text-info">Phone Number</h4></label><br>
+               <input type="phone" class="form-control" placeholder="Phone Number" name="phone" required><br>
+
+               <label for="email"><h4 class="text-info">Email</h4></label><br>
+               <input type="email" class="form-control" placeholder="Emmanuel Kant@gmail.com" name="email" required><br>
+
+                <label for="copname"><h4 class="text-info">Company's Name</h4></label><br>
+                <input type="text"  class="form-control"placeholder="Enter the company's name for the job" name="copname" required><br>
+
+                <label for="Jobtitle"><h4 class="text-info">Job Title</h4></label><br>
+                <input type="text" class="form-control" placeholder="Enter the title" name="jobtitle" required><br>
+
+                <label for="location"><h4 class="text-info">Location</h4></label><br>
+                <input type="text" class="form-control" placeholder="Enter the Location" name="location" required><br>
+            
+        
+                    <button type="submit" class="btn btn-primary">Next</button>
+    
+        
+            </div>
+
+       </form>
+                    
+            </div>   
+        </div>
+
+    </div>
+<br>
+
+
+
+
+
+        <footer>
+            <div class="container p-0">
+                <div class="row text-left">
+                    <div class="col-md-5 col-md-5">
+                        <h4 class="text-light">About Us</h4>
+                        <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                        <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+        
+                        <h4 class ="text-light">Follow us</h4>
+                        <p class="text-warning">Let be your plug</p>
+                        <div class ="column">
+                            <i class = "fab fa-facebook"></i>
+                            <i class = "fab fa-instagram"></i>
+                            <i class = "fab fa-twitter"></i>
+                            <i class = "fab fa-youtube"></i>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </footer>
+        
+        </body>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+        <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+    </html>

@@ -1,0 +1,221 @@
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.menubar
+{
+    background-image: linear-gradient(to right,white, orange);
+    
+
+}
+.menubar a:hover
+{
+    text-decoration: underline white;
+}
+
+.nav-link
+{
+    font-size: 16px;
+    color:lightblue !important;
+    margin: 2px;
+}
+
+.navbar-nav
+{
+    text-align: right;
+    
+}
+.menubar .navbar-toggler
+{
+    padding-right:0;
+    outline: none;
+    border: none;
+}
+
+header .nav-item:last-child {
+    padding-right:10.5rem;
+}
+
+header .nav-item:first-child {
+    padding-right:10.5rem;
+}
+
+.dropdown-content {
+    display:none;
+    position: absolute;
+    background: lightblue;
+    min-width:100px;
+    box-shadow: 0px 2px 15px 0px orange;
+    z-index:1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration:none;
+    display:block;
+}
+
+.dropdown-content a:hover{
+    background: orange;
+    text-decoration:none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+
+header{
+    background-image: linear-gradient(to right,black, orange);
+}
+
+.shadow
+{
+
+    font-size:50px;
+    letter-spacing: 6px;
+    text-shadow: 0 0px 30px white;
+}
+header .row .col-md-12{
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+}
+
+.section-1{
+    padding:20vmin 0;
+}
+
+.section-1 .row .col-md-6 .work img {
+    opacity:0.8;
+    width:80%;
+    border-radius: 0.2em;
+    margin-left:200px;
+}
+
+.section-1 .row .col-md-6:last-child{
+    position:relative;
+}
+
+.section-1 .row .col-md-6 .panel{
+    position:absolute;
+    top:2vmin;
+    left:-5vmin;
+    background: lightblue;
+    border-radius: 3px;
+    text-align: left;
+    padding:5vmin 5vmin 5vmin 5vmin;
+    box-shadow: 0px 15px 20px orange;
+    z-index:1;
+}
+
+
+.cover{
+    width:100%;
+    height:55vmin;
+    background: url(../image/images\ \(15\).jpeg);
+    background-position: -24rem -19rem;
+    position:relative;
+}
+
+.cover .content{
+    padding-top:19vmin;
+    height:-100px;
+}
+
+.cover .content>h1{
+    color:orange;
+    font-size:7vmin;
+}
+
+.numbers .rect{
+    position: relative;
+    z-index: 1;
+    background:lightblue;
+    width:17rem;
+    height:12rem;
+    padding-top:3.5vmin;
+    margin:1rem;
+    border-radius: .5em;
+    box-shadow: 1px 2px 10px 0px orange;
+}
+
+.numbers{
+    margin-top:-19vmin;
+}
+
+.numbers .rect p{
+        color:orange;
+        font-size:18px;
+}
+
+.purchase >h1{
+    padding-top:5vmin;
+    padding-bottom: 0.1em;
+    font-size:30px;
+    color: orange;
+}
+
+.purchase >p{
+    color:lightblue;
+    font-size:2.6vmin;
+    padding-bottom: 5vmin;
+}
+
+
+.purchase .cards .card{
+    width:22rem;
+    margin:3vmin;
+
+}
+
+.cards div{
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+}
+
+.cards .card p{
+    color:lightslategray;
+}
+
+.section-3{
+    height:50vmin;
+    margin-top:15vmin;
+    background: lightblue;
+}
+
+.section-3 .row .col-md-12{
+    color:orange;
+}
+
+.section-3 .col-md-12 .btn-dark{
+    margin-top:15vmin;
+    color: white;
+    background:lightslategray;
+}
+
+.section-3 .col-md-12 .btn-dark:hover
+{
+    cursor: pointer;
+    color:lightblue;
+    background:orange;
+}
+
+footer{
+    background:linear-gradient(to left, lightblue,lightslategray);
+    overflow-x:hidden;
+    padding:6vmin 6vmin;
+}
+
+.column i {
+    color:orange;
+    padding: .5rem;
+}

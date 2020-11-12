@@ -1,0 +1,77 @@
+.container{
+    margin-top: 50px !important;
+}
+
+.flex-row{
+    background: linear-gradient(to left, orange, black);
+}
+
+
+button[type="submit"]
+{
+    margin-top: 10px;
+    border:none;
+    cursor:pointer;
+    border-radius: 50px;
+    background:orange;
+    color:lightblue;
+    font-size:90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition: 0.5s;
+    padding: 12px;
+    margin-left: 100px !important;
+}
+
+button[type="submit"]:hover{
+    background:lightblue;
+}
+
+.text .btn-social{
+    color:white !important;
+    border:0;
+    font-weight: bold;
+}
+
+ .text .btn-facebook{
+    background: blue;
+    margin-bottom: 20px;
+    margin-left: 30px !important;
+    padding-left: 70px;
+
+}
+.text .btn-goggle{
+    background: #da3f34;
+    margin-bottom: 20px;
+    margin-left: 30px !important;
+    padding-left: 70px;
+}
+
+
+.text .btn-twitter{
+    background:dodgerblue;
+    margin-bottom: 20px;
+    margin-left: 30px !important;
+    padding-left: 70px;
+}
+.text .btn-facebook a:hover{
+    background-color: lightblue;
+}
+
+.text .btn-google a:hover{
+    background-color:lightblue;
+}
+.text .twitter a:hover{
+    background-color:lightblue;
+}
+
+
+.text-center{
+    margin-bottom: 30px;
+    margin-top: 40px;
+    color:orange;
+}
+
+.text-center p{
+    font-size: 25px;
+}

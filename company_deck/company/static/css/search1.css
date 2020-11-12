@@ -1,0 +1,199 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.menubar
+{
+    background-image: linear-gradient(to right,white, orange);
+    
+
+}
+.menubar a:hover
+{
+    text-decoration: underline white;
+}
+
+.nav-link
+{
+    font-size: 16px;
+    color:lightblue !important;
+    margin: 2px;
+}
+
+.navbar-nav
+{
+    text-align: right;
+    
+}
+.menubar .navbar-toggler
+{
+    padding-right:0;
+    outline: none;
+    border: none;
+}
+
+header .nav-item:last-child {
+    padding-right:10.5rem;
+}
+
+header .nav-item:first-child {
+    padding-right:10.5rem;
+}
+
+.dropdown-content {
+    display:none;
+    position: absolute;
+    background: lightblue;
+    min-width:100px;
+    box-shadow: 0px 2px 15px 0px orange;
+    z-index:1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration:none;
+    display:block;
+}
+
+.dropdown-content a:hover{
+    background: orange;
+    text-decoration:none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+header .row .col-md-12{
+    padding: 22vmin 1vmin;
+    padding-bottom: 35vmin;
+}
+
+
+.company-details_heading
+ {
+    color: white;
+}
+
+.company-details
+{
+    box-shadow: 0 2px 70px black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.job-update
+{
+    background: lightblue;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+.job-update2
+{
+    background: lightblue;
+    padding:20px 30px;
+    border-radius:5px;
+    color:rgb(163, 112, 18);
+
+
+}
+
+
+.job-update .fa
+{
+    margin-top: 5px;
+    margin-right:10px;
+    color:orange;
+}
+.job-update small
+{
+    background-color: lightblue;
+    padding:1px 5px;
+    margin: 0;
+}
+
+.job-update p
+{
+    margin-bottom:0 !important ;
+}
+
+.job-update a
+{
+    text-decoration: none !important;
+    color: lightblue;
+    float: right
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.about
+{
+    height: 40px;
+    background-image: linear-gradient(to right, white, orange);
+    padding: 7px;
+    border-bottom-left-radius: 5px;
+    border-bottom-color: 5px;
+
+}
+
+.numbers .rect{
+    position: relative;
+    z-index: 1;
+    background:lightblue;
+    width: 20rem;
+    height:15rem;
+    padding-top:3.5vmin;
+    margin:1rem;
+    border-radius: .5em;
+    box-shadow: 1px 2px 10px 0px orange;
+}
+
+.apply-btn .btn-primary
+{
+    padding: 0 30px;
+    float:right;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid white;
+
+}
+.section-3{
+    height:80vmin;
+    padding:10px 20px;
+    margin-top:15vmin;
+    background: lightblue;
+    border-radius:5px;
+}
+
+.section-3 .row .col-md-12{
+    color:orange;
+}
+
+.section-3 .col-md-12 .btn-dark{
+    margin-top:50vmin;
+    color: white;
+    background:lightslategray;
+}
+
+footer{
+    background:linear-gradient(to left, lightblue,lightslategray);
+    overflow-x:hidden;
+    padding:6vmin 6vmin;
+}
+
+.column i {
+    color:orange;
+    padding: .5rem;
+}
+
+

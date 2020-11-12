@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+    <html lang="en">
+    <head>
+        <title>Jobs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/job_product2.css' %} ">  
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+    </head>
+    <body>
+
+        <header>
+
+            <section id="header">
+               <div class="menubar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href=" {% url 'index' %} "><img src=" {% static 'image/deck.png' %} "alt="logo" width="45px"></a></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class ="mr auto"></div>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item dropdown">
+                                    <div class = "dropdown">
+                                    <a class="nav-link" href="company_review.html">Companies review</a>
+                                <div class ="dropdown-content">
+                                    <a href="#">Companies</a>
+                                    <a href=" {% url 'job_search' %} " >All Jobs</a>
+                                    </div>
+                                </div>
+                                </li>
+        
+                                <li class="nav-item dropdown">
+                                    <div class="dropdown">
+                                        <a class="nav-link" href=" {% url 'employer_page' %} ">Employer</a>
+                                        <div class="dropdown-content">
+                                            <a href = "{% url 'employ_form' %}">Post Job</a>
+                                        </div>
+                                    </div>
+                                   
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+        </section>
+        </header>
+        {% for job in jobs %}
+        <section id="job">
+            <div class="container">
+                <h4 class = "company-details_heading">{{ job.title }}</h4>
+                
+            </div>
+        </section>
+
+        <div class="search-job text-center">
+            <div class = "form-group">
+                <div class="container-fluid text-center">
+                    <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+                <div class="rect">
+                    <p>new</p>
+                    <p>{{ job.name}}</p>
+                    
+                    <p>{{ job.amount}}</p>
+                    
+                    <p>{{ job.requirements}}</p>
+
+                    <p> <a href = '{{ job.url}}' > Easy to apply</a></p>
+                    {{ job.created_date}}
+                </div>
+                <div class="rect">
+                    <p>new</p>
+                    <p>{{ job.name}}</p>
+
+                    <p>{{ job.amount2}}</p>
+
+                    <p>{{ job.requirements2}}</p>
+
+                    <p> <a href = '{{ job.url2}}' > Easy to apply</a></p>
+
+                    {{ job.created_date}}
+
+                </div>
+                <div class="rect"> <p>new</p>
+                    <p>{{ job.name}}</p>
+                
+                    <p>{{ job.amount3}}</p>
+
+                    <p>{{ job.requirements3}}</p>
+
+                    <p> <a href = '{{ job.url3}}' > Easy to apply</a></p>
+                    {{ job.created_date}}
+                </div>
+                
+                    </div>
+                    <section id="jobs">
+                        <div class="container">
+                           
+                            <div class="company-details">
+                                <div class="job-update">
+                                    <i class="fas fa-clock text-warning"></i> Urgently apply   <br>   {{ job.details}}
+                                </div>
+                                <div class="apply-btn">
+                                    <a href="{{job.url}}">
+                                    <button type="button" class="btn btn-primary">Apply</button>
+                                    </a>
+                                 </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+    </div>
+        </div>
+        
+        {% endfor %}    
+    <footer>
+        <div class="container p-0">
+            <div class="row text-left">
+                <div class="col-md-5 col-md-5">
+                    <h4 class="text-light">About Us</h4>
+                    <p class = "text-warning ">connecting employers and seekers of jobs<br>
+                    <span class= "pt-4 text-warning">&copy 2020 .3 AboCoders OgunTech Hub Ogun State, Nigeria</span></p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+    
+                    <h4 class ="text-light">Follow us</h4>
+                    <p class="text-warning">Let be your plug</p>
+                    <div class ="column">
+                        <i class = "fab fa-facebook"></i>
+                        <i class = "fab fa-instagram"></i>
+                        <i class = "fab fa-twitter"></i>
+                        <i class = "fab fa-youtube"></i>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+    <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+    <script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+     </html>

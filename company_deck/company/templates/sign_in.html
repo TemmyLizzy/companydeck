@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{%load static%}
+    <html lang="en">
+    <head>
+        <title>Deck Sign_in</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href=" {% static 'css/sign.css' %} ">
+        <link rel="stylesheet" href=" {% static 'bootstrap-4.5.2-dist/css/bootstrap.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'fontawesome-free-5.14.0-web/css/all.css' %} ">
+</head>
+
+
+
+<body>
+<div class="container">
+    <div class="row px-3">
+         <div class="col-lg-5 col-xl-5 card flex-row mx-auto px-0">
+                      <div class="img-left d-none d-md-flex"></div>
+                <div class="card-body">
+                     <h4 class="title text-center mt-4">
+                        SIGN IN
+                     </h4>
+                     {{ user_form.errors}}
+                    <form method="POST" action="/sign_in/"class="form-box px-3 text-center">
+                         {% csrf_token %}
+                         <div class="form-input">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input type="name" name= "username" placeholder="Username" required>
+                        </div>
+                        <br>
+
+
+                        <div class="form-input">
+                            <span><i class="fa fa-key"></i></span>
+                           <input type="password" name="password" placeholder="Password"required>
+                       </div>
+
+                         <a href=" {% url 'job_search' %} ">
+                         <div class="mb-3 col-6">
+                            <button type="submit" class="btn btn-block text-lowercase">
+                                Continue 
+                            </button>
+                        </a>
+                    </form>
+                        <div class="text-center" mb-3>
+
+                        
+
+                       
+                         <p class="text-center">   OR   </p>
+                        
+                            <div class="row mb-3 text">
+                                <div>
+                                    <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-social btn-facebook">facebook
+                                    </a>
+                                 </div>
+                                 <br>
+                                <div>
+                                    <a href="#" class="btn btn-block btn-social btn-goggle">goggle
+                                    </a>
+                                 </div> <br>
+                               <div>
+                                        <a href="#" class="btn btn-block btn-social btn-twitter">twitter</a>
+                                 </div>
+                            </div>
+
+                            <a href=" {% url 'index' %} " class="text-decoration-none text-warning"><i class="fa fa-arrow-left"></i> Back</a>
+                            <hr class="my-4">
+                        
+            
+                </div>
+
+        </div>   
+    </div>
+</div>
+
+</body>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/jquery.min.js' %} "></script>
+<script src=" {% static 'bootstrap-4.5.2-dist/js/bootstrap.js' %} "></script>
+</html>
